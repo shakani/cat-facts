@@ -1,4 +1,5 @@
 import streamlit as st 
+import catfact as cf 
 
 def fetch_fact():
     return 'Cat fact placeholder'
@@ -6,7 +7,8 @@ def fetch_fact():
 def app():
     st.title('Cat Facts')
     st.markdown("Here's a random cat fact to brighten your day!")
-    st.markdown(fetch_fact())
+    fact = cf.fetch_fact()
+    st.markdown(fact)
 
 if __name__ == "__main__":
     app()
