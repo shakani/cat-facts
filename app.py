@@ -5,16 +5,16 @@ import catpic as cp
 USE_API = False
 
 def fetch_fact(USE_API=False):
-    if not USE_API:
-        return 'Cat fact'
-    else:
+    if USE_API:
         return cf.fetch_fact()
+    else:
+        return 'Cat fact'
 
 def fetch_pic(USE_API=False):
-    if not USE_API:
-        return 'https://cdn2.thecatapi.com/images/MTYwNzYxNg.jpg'
-    else:
+    if USE_API:
         return cp.fetch_pic()
+    else:
+        return 'https://cdn2.thecatapi.com/images/MTYwNzYxNg.jpg'
 
 
 def app():
