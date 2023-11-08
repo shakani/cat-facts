@@ -2,7 +2,7 @@ import streamlit as st
 import catfact as cf 
 import catpic as cp
 
-USE_API = False
+USE_API = True
 
 def fetch_fact(USE_API=False):
     if USE_API:
@@ -19,7 +19,7 @@ def fetch_pic(USE_API=False):
 
 def app():
     st.title('Cat Facts')
-    st.markdown("Here's a random cat fact to brighten your day!")
+    st.markdown("Here's a random cat fact to brighten your day! (Refresh for a new fact and cat)")
     fact = fetch_fact(USE_API)
     st.markdown(fact)
     img = fetch_pic(USE_API)
