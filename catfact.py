@@ -1,6 +1,8 @@
 import requests
 import json 
 
+x = 3
+
 def fetch_fact() -> str:
     """
     Generates and returns random cat fact.
